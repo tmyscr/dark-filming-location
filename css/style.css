@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+
+:root {
+  --main-color: #161D2D;
+  --bg-color: #01080E;
+  --text: #CCCCCC;
+  --title: #F5F5F5;
+  --details: #E4B750;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.navbar {
+  background-color: var(--main-color);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.navbar ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--title);
+}
+
+.navbar a:hover {
+  color: var(--details);
+}
+
+.navbar input {
+  padding: 10px 35px 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+}
+
+.input-container {
+  width: 20%;
+  position: relative;
+}
+
+svg {
+  fill: #797979;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.intro-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1.9em;
+  font-weight: lighter;
+  align-self: center;
+}
+
+.intro-image {
+  max-width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: contain;
+}
+
+.main-content {
+  width: 90%;
+  background-color: var(--main-color);
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.main-content::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: var(--details);
+  border-radius: 10px 10px 0 0;
+}
+
+.secondary-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  color: #969AA1;
+  grid-column: 1 / -1;
+  margin-top: 60px;
+}
+
+.location-title {
+  grid-column: 1 / -1;
+  font-family: 'Cantata One', serif;
+  color: var(--title);
+  font-size: 36px;
+}
+
+.grid  {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.location-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.description, .info {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.description h3, .info h3 {
+  color: var(--title);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.description p, .info p {
+  color: var(--text);
+  margin-bottom: 20px;
+  line-height: 22px;
+}
+
+.description {
+  width: 75%;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.description h3, .info h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info p {
+  font-size: 18px;
+}
+
+.text-highlight {
+  color: var(--details);
+}
+
+.location {
+  width: 60%;
+  display: flex;
+  position: relative;
+}
+
+.location-icon {
+  position: absolute;
+  left: -35px;
+}
+
+.location::before {
+  content: url('../images/location-icon.svg');
+  position: absolute;
+  left: -40px;
+  top: 45px;
+}
+
+.location p {
+  font-weight: bold;
+  color: var(--title);
+  margin: 40px 0 ;
+}
+
+.dark-link a {
+  background: url("../images/symbol.svg") no-repeat;
+  display: block;
+  width: 50px;
+  height: 50px;
+  fill: var(--details);
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  opacity: 0;
+  transition: opacity 700ms;
+}
+
+.dark-link a:hover {
+  opacity: 1;
+}
+
+
+
+
